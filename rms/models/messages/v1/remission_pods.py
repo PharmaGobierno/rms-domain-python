@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 from typing import Dict
 
-from rms.models.v1.remission_pods import RemissionsPodsModel
+from rms.models.v1.remission_pods import RemissionPodsModel
 
 from ._enums import EntityActionTypes
 from .base_publisher import BasePubsubMessage
@@ -9,7 +9,7 @@ from .base_publisher import BasePubsubMessage
 
 @dataclass(kw_only=True)
 class RemissionPodsPubsubMessage(BasePubsubMessage):
-    payload: RemissionsPodsModel
+    payload: RemissionPodsModel
     event: str
     action_type: EntityActionTypes
     version: str = "1"

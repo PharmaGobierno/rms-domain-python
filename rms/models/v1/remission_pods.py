@@ -8,7 +8,7 @@ from ._enums import RemissionEvents
 
 
 @dataclass(kw_only=True)
-class RemissionsPodsModel(UpdatableModel):
+class RemissionPodsModel(UpdatableModel):
     __entity_name__ = "rms-remission-pods"
 
     tracking_id: str
