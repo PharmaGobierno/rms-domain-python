@@ -10,7 +10,6 @@ from .base_publisher import BasePubsubMessage
 @dataclass(kw_only=True)
 class RemissionPodsPubsubMessage(BasePubsubMessage):
     payload: RemissionPodsModel
-    event: str
     origin_platform: str
     action_type: EntityActionTypes
     version: str = "1"
