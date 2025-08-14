@@ -11,6 +11,7 @@ from .base_publisher import BasePubsubMessage
 class RemissionPodsPubsubMessage(BasePubsubMessage):
     payload: RemissionPodsModel
     event: str
+    origin_platform: str
     action_type: EntityActionTypes
     version: str = "1"
 
@@ -22,6 +23,6 @@ class RemissionPodsPubsubMessage(BasePubsubMessage):
         default_attributes = super().get_attributes()
         return {
             **default_attributes,
-            "event": self.event,
             "action_type": self.action_type.value,
+            "origin_platform": self.origin_platform,
         }
