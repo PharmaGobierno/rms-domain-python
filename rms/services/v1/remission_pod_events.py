@@ -6,7 +6,7 @@ from rms.repository_interfaces.v1.remission_pod_events import (
 from ._base import BaseService
 
 
-class RemissionEventsService(
+class RemissionPodEventsService(
     BaseService[RemissionPodEventsModel, RemissionPodEventsRepositoryInterface]
 ):
     __model__ = RemissionPodEventsModel

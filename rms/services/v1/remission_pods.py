@@ -6,7 +6,9 @@ from rms.repository_interfaces.v1.remission_pods import RemissionPodsRepositoryI
 from ._base import BaseService
 
 
-class RemissionsService(BaseService[RemissionPodsModel, RemissionPodsRepositoryInterface]):
+class RemissionPodsService(
+    BaseService[RemissionPodsModel, RemissionPodsRepositoryInterface]
+):
     __model__ = RemissionPodsModel
 
     def get_by_tracking_id(
