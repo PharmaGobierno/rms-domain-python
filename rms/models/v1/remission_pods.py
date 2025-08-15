@@ -4,7 +4,7 @@ from typing import Optional
 from rms.models.v1.minified.users import UserMin
 
 from ._base import UpdatableModel, uuid_by_params
-from ._enums import RemissionEvents
+from ._enums import RemissionPodEvents
 
 
 @dataclass(kw_only=True)
@@ -13,7 +13,7 @@ class RemissionPodsModel(UpdatableModel):
 
     tracking_id: str
     order_id: str
-    current_event: Optional[RemissionEvents] = None
+    current_event: Optional[RemissionPodEvents] = None
     current_event_timestamp: Optional[int] = None
     last_load: Optional[str] = None
     last_ans: Optional[UserMin] = None

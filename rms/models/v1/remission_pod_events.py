@@ -1,15 +1,15 @@
 from dataclasses import dataclass
-from typing import Optional, List
+from typing import List, Optional
 
+from rms.models.submodels.v1.evidences import Evidence
 from rms.models.v1.minified.users import UserMin
 
 from ._base import EventfulModel, uuid_by_params
-from ._enums import RemissionEvents
-from rms.models.submodels.v1.evidences import Evidence
+from ._enums import RemissionPodEvents
 
 
 @dataclass(kw_only=True)
-class RemissionPodEventsModel(EventfulModel[RemissionEvents]):
+class RemissionPodEventsModel(EventfulModel[RemissionPodEvents]):
     __entity_name__ = "rms-remission-pod-events"
 
     tracking_id: str

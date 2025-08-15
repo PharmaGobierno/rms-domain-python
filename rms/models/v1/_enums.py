@@ -5,7 +5,7 @@ class OrderTypes(str, Enum):
     REMISSION = "REMISSION"
 
 
-class RemissionEvents(str, Enum):
+class RemissionPodEvents(str, Enum):
     CREATED = "CREATED"
     DELIVERY_STARTED = "DELIVERY_STARTED"
     PODS_SUBMITTED = "PODS_SUBMITTED"
@@ -15,9 +15,9 @@ class RemissionEvents(str, Enum):
     PHYSICAL_SCANNED = "PHYSICAL_SCANNED"
 
 
-
 class FileType(str, Enum):
     pass
+
 
 class DocumentName(str, Enum):
     pass

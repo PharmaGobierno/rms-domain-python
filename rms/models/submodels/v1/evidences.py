@@ -1,6 +1,9 @@
+from typing import Literal, Optional
+
 from pydantic import BaseModel
-from typing import Optional, Literal
+
 from rms.models.v1._enums import DocumentName, FileType
+
 
 class Evidence(BaseModel):
     value: str
