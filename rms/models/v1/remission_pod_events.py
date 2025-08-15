@@ -13,7 +13,7 @@ class RemissionPodEventsModel(EventfulModel[RemissionPodEvents]):
     __entity_name__ = "rms-remission-pod-events"
 
     tracking_id: str
-    order_id: str
+    remission_pod_id: str
     author: UserMin
     load_id: Optional[str] = None
     metadata: Optional[dict] = None
